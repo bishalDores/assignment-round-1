@@ -202,9 +202,7 @@ video {
   display: inline-block;
   text-align: left;
 }
-.research-container ul li {
-  padding-bottom: 16px;
-}
+
 .research-container ul li a {
   font-family: MuliBold;
   position: relative;
@@ -213,6 +211,7 @@ video {
   text-transform: capitalize;
   color: #2e2a2a;
   text-decoration: none;
+  display: inline-block;
 }
 
 .research-container ul li a:before {
@@ -463,28 +462,35 @@ video {
   justify-content: center;
 }
 
-.register-wrapper-content .form-control {
+.register-wrapper-content .form-control,
+.subscription-form-wrapper .form-control {
   padding: 0.75rem 0.75rem;
   border-radius: 0px;
-  border-bottom: 0;
 }
-.register-wrapper-content input::placeholder {
+.register-wrapper-content input::placeholder,
+.subscription-form-wrapper input::placeholder {
   font-size: 14px;
 }
-.register-wrapper-content input:focus {
+.register-wrapper-content input:focus,
+.subscription-form-wrapper input:focus {
   box-shadow: none;
   outline: 0;
 }
-.register-wrapper-content button {
+.register-wrapper-content button,
+.subscription-form-wrapper button {
   padding: 0.375rem 2.75rem;
   background-color: #0063a2;
   color: white;
   border: none;
   border-radius: 0px;
+  font-size: 14px;
 }
 .register-wrapper-content button:hover,
 .register-wrapper-content button:focus,
-.register-wrapper-content button:active {
+.register-wrapper-content button:active,
+.subscription-form-wrapper button:hover,
+.subscription-form-wrapper button:focus,
+.subscription-form-wrapper button:active {
   background-color: #0063a2;
   box-shadow: none;
   outline: 0;
@@ -499,7 +505,7 @@ video {
 
 .single-box {
   width: 150px;
-  border: 1px solid #0063a2;
+  border: 2px solid #0063a2;
   height: 140px;
   margin-right: 20px;
   padding: 20px;
@@ -509,7 +515,38 @@ video {
   align-items: center;
   color: #0063a2;
 }
+/* latest new */
+.latest-news-wrapper a {
+  text-decoration: none;
+}
+.latest-news-wrapper a p {
+  color: #2e2a2a;
+}
+.latest-news-wrapper a:hover .card {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22) !important;
+}
+footer {
+  background-color: #f8f8f8;
+  padding: 40px 0;
+}
+footer img {
+  width: 120px;
+}
+.footer-social-links a {
+  color: #0063a2;
+  font-size: 14px;
+}
+.footer-nav-links ul li {
+  display: inline;
+}
+.footer-nav-links ul li a {
+  font-size: 14px;
+  color: #2e2a2a;
+  text-decoration: none;
+  padding-right: 20px;
+}
 
+/* media query */
 @media (min-width: 768px) {
   .px-md-7 {
     padding-right: 7rem;
@@ -519,6 +556,9 @@ video {
 @media (min-width: 1200px) {
   .register-wrapper {
     padding: 0 80px;
+  }
+  .subscription-form-wrapper {
+    width: 450px;
   }
 }
 
@@ -541,6 +581,9 @@ video {
   }
   .single-box {
     margin-bottom: 20px;
+  }
+  .center-align {
+    text-align: center;
   }
 }
 

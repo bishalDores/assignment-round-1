@@ -73,3 +73,18 @@ $(function () {
     fixedContentPos: false,
   });
 });
+
+window.onscroll = function () {
+  navbarHandler();
+};
+
+var header = document.getElementById('header');
+var sticky = header.offsetTop;
+
+function navbarHandler() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+}

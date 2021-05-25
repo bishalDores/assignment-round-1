@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $('.owl-carousel').owlCarousel({
+  $('.client-wrapper').owlCarousel({
     loop: true,
     autoplay: true,
     lazyLoad: true,
@@ -29,5 +29,47 @@ $(document).ready(function () {
         items: 8,
       },
     },
+  });
+});
+
+$(document).ready(function () {
+  $('.testimonial-wrapper').owlCarousel({
+    loop: true,
+    autoplay: true,
+    items: 1,
+    lazyLoad: true,
+    autoplayTimeout: 3000,
+    smartSpeed: 1500,
+    center: true,
+    navText: [
+      '<i class="bi bi-arrow-left"></i>',
+      '<i class="bi bi-arrow-right"></i>',
+    ],
+    nav: true,
+    autoplayHoverPause: true,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: false,
+      },
+      600: {
+        items: 1,
+      },
+      1000: {
+        items: 1,
+      },
+    },
+  });
+});
+
+$(function () {
+  $('.popup-video-one').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+    fixedContentPos: false,
   });
 });

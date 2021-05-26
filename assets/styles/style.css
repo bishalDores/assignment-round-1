@@ -16,7 +16,9 @@
   margin: 0;
   padding: 0;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: Muli !important;
 }
@@ -27,6 +29,7 @@ body {
   width: 100%;
   z-index: 2;
 }
+
 .fs-7 {
   font-size: 14px;
 }

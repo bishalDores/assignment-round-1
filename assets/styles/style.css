@@ -109,6 +109,7 @@ video {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .hero-content h2 {
   text-transform: capitalize;
   color: #ffffff;
